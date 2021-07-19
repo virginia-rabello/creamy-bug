@@ -8,6 +8,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+ //mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/creamy-bug',function(){
+ /* Drop the DB */
+  //   mongoose.connection.db.dropDatabase();
+//});
+
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/creamy-bug', {
   useFindAndModify: false,
   useNewUrlParser: true,
