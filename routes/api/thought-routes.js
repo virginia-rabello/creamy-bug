@@ -27,6 +27,6 @@ router
   .put(addReaction);
 
 // /api/thoughts/<thougthId>/<userId>/<reactionId>
-router.route('/:thoughtId/:reactionId').put(removeReaction);
+router.route('/:thoughtId/:userId/:reactionId').put(removeReaction);
 
 module.exports = router;
